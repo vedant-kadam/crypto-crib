@@ -1,0 +1,70 @@
+goal - to make transation over blockchain and share content as a nft
+priority  goal  - know how ot make transtion over blockchain 
+secondary - do trnasation and store the info of the image or gi on the block chain 
+
+
+tech stack used for project:
+frontend-
+react
+tailwind
+npm
+
+backend-
+
+
+
+
+
+1- create a vite project in the client directory
+2- initilize tailwind css
+3- make a basic layout of the section 
+4- Smart Contact 
+    1- we use hard hat to tun solidity locallly and test the smart contacrt
+    2- install hardhat--- npm install --save-dev hardhat
+    3- use the commmand npx hardhat to start the sset up
+    4- set up a normal project as for the current req 
+    5- test weather the scripsta re able to comiple, if issue sced update teh npm modules from in program files 
+    6- Make a New sol file name it transaction.sol 
+    7-Contract is like class in js and other programing langusage
+    8- uint is like int 
+    9- events means functions
+    10- hre.ethers.getContractFactory("Transactions"); genrates instances of the tranasactions
+    11- To test we need to get test eth so go to the following website https://faucet.egorfine.com/
+       - 1. To get the eth to test  first setup the metamask
+         2.  meta mask chrome ext add it (I like the website);
+         3. Now after making the account click on the profile icons and click on show hide test network 
+         4. enable the show hide test in setting 
+         5- select ropsson test network but sometimes no ropset is avalaible so to to coinlik fauset you will get 0.1 eth to test
+    12- Alchemy is used to deploy our blockchain smart Contract create a new app and copy the http key for that app
+    13- Go to hardhat config and del all and start with the the below
+        require('@nomiclabs/hardhat-waffle'); 
+
+        module.exports={
+        solidity: '0.8.0',
+        networks: {
+            rinkeby:{
+            url:"https://eth-rinkeby.alchemyapi.io/v2/ddedgdghfdhajfhhedfJ",
+            accounts:['fdhfdhfhhjsfhajhajfhjahdjashd']
+            }
+        }
+        }
+        rinkeby is the object which store the url to our wallet and teh account private key
+    14-npx hardhat run scripts/deploy.js --network rinkeby   run the following commnad
+    15- and on successful compilation you will receive a address which will be the contact address
+    16- now files will be genrated  in artifacts an abi will be created a contract application binary interface its a 
+        staandard way to interact with the contact from outside as well as from contract to contract
+
+    17- store the now json files in artifacts call transaction in the clint side too because we are needed to 
+        link sc with the fron end i.e client 
+    
+5- Now use a context api to route and do the linking so make a contex folder in the src
+     1- create a file called transactionContext.jsx in the new folder
+     2- 
+
+
+
+
+
+        Tailwind 
+width 
+w-32 = 32/4 = 8rem 
